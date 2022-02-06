@@ -42,6 +42,22 @@
 			<Property Name="QueryStoreStaleQueryThreshold" Value="367" />
 			<Property Name="MaxDop" Value="0" />
 		</Element>
+		<Element Type="SqlDefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[1]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[User].[RoleId]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="3" />
+		</Element>
 		<Element Type="SqlPrimaryKeyConstraint">
 			<Relationship Name="ColumnSpecifications">
 				<Entry>
@@ -59,7 +75,7 @@
 					<References Name="[dbo].[UserRole]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="3" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="4" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint">
 			<Relationship Name="ColumnSpecifications">
@@ -78,7 +94,7 @@
 					<References Name="[dbo].[DeploymentScript]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="4" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="5" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[Channel]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -180,7 +196,7 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="5" />
+						<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="6" />
 					</Element>
 				</Entry>
 			</Relationship>
@@ -189,8 +205,8 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="6" />
 			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="7" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="8" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[Comment]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -282,10 +298,10 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="8" />
 			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="9" />
 			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="10" />
 			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="11" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="12" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[DeploymentScript]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -305,7 +321,7 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="4" />
+						<AttachedAnnotation Disambiguator="5" />
 					</Element>
 				</Entry>
 			</Relationship>
@@ -329,7 +345,7 @@
 					<References Name="[dbo].[Channel].[IsDeleted]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="5" />
+			<AttachedAnnotation Disambiguator="6" />
 		</Element>
 		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF_Playlist_IsDeleted]">
 			<Property Name="DefaultExpressionScript">
@@ -345,7 +361,7 @@
 					<References Name="[dbo].[Playlist].[IsDeleted]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="12" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="13" />
 		</Element>
 		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF_Playlist_IsPublic]">
 			<Property Name="DefaultExpressionScript">
@@ -361,7 +377,7 @@
 					<References Name="[dbo].[Playlist].[IsPublic]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="13" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="14" />
 		</Element>
 		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF_User_IsDeleted]">
 			<Property Name="DefaultExpressionScript">
@@ -377,7 +393,7 @@
 					<References Name="[dbo].[User].[IsDeleted]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="14" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="15" />
 		</Element>
 		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF_Video_Dislikes]">
 			<Property Name="DefaultExpressionScript">
@@ -393,7 +409,7 @@
 					<References Name="[dbo].[Video].[Dislikes]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="15" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="16" />
 		</Element>
 		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF_Video_IsAllowedForKids]">
 			<Property Name="DefaultExpressionScript">
@@ -409,7 +425,7 @@
 					<References Name="[dbo].[Video].[IsAllowedForKids]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="16" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="17" />
 		</Element>
 		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF_Video_IsDeleted]">
 			<Property Name="DefaultExpressionScript">
@@ -425,7 +441,7 @@
 					<References Name="[dbo].[Video].[IsDeleted]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="17" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="18" />
 		</Element>
 		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF_Video_Rating]">
 			<Property Name="DefaultExpressionScript">
@@ -441,7 +457,7 @@
 					<References Name="[dbo].[Video].[Likes]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="18" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="19" />
 		</Element>
 		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF_Video_Views]">
 			<Property Name="DefaultExpressionScript">
@@ -457,7 +473,7 @@
 					<References Name="[dbo].[Video].[Views]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="19" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="20" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Channel_User]">
 			<Relationship Name="Columns">
@@ -480,7 +496,7 @@
 					<References Name="[dbo].[User]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="7" />
+			<AttachedAnnotation Disambiguator="8" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Comment_Comment]">
 			<Relationship Name="Columns">
@@ -503,7 +519,7 @@
 					<References Name="[dbo].[Comment]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="9" />
+			<AttachedAnnotation Disambiguator="10" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Comment_User]">
 			<Relationship Name="Columns">
@@ -526,7 +542,7 @@
 					<References Name="[dbo].[User]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="10" />
+			<AttachedAnnotation Disambiguator="11" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Comment_Video]">
 			<Relationship Name="Columns">
@@ -549,7 +565,7 @@
 					<References Name="[dbo].[Video]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="11" />
+			<AttachedAnnotation Disambiguator="12" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Playlist_User]">
 			<Relationship Name="Columns">
@@ -572,7 +588,7 @@
 					<References Name="[dbo].[User]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="20" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="21" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_PlaylistItem_Playlist]">
 			<Relationship Name="Columns">
@@ -595,7 +611,7 @@
 					<References Name="[dbo].[Playlist]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="21" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="22" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_PlaylistItem_Video]">
 			<Relationship Name="Columns">
@@ -618,7 +634,7 @@
 					<References Name="[dbo].[Video]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="22" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="23" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Rating_User]">
 			<Relationship Name="Columns">
@@ -641,7 +657,7 @@
 					<References Name="[dbo].[User]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="23" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="24" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Rating_Video]">
 			<Relationship Name="Columns">
@@ -664,7 +680,7 @@
 					<References Name="[dbo].[Video]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="24" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="25" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_User_UserRole]">
 			<Relationship Name="Columns">
@@ -687,7 +703,7 @@
 					<References Name="[dbo].[UserRole]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="25" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="26" />
 		</Element>
 		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Video_Channel]">
 			<Relationship Name="Columns">
@@ -710,7 +726,7 @@
 					<References Name="[dbo].[Channel]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="26" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="27" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_Channel]">
 			<Relationship Name="ColumnSpecifications">
@@ -729,7 +745,7 @@
 					<References Name="[dbo].[Channel]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="6" />
+			<AttachedAnnotation Disambiguator="7" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_Comment]">
 			<Relationship Name="ColumnSpecifications">
@@ -748,7 +764,7 @@
 					<References Name="[dbo].[Comment]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="8" />
+			<AttachedAnnotation Disambiguator="9" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_Playlist]">
 			<Relationship Name="ColumnSpecifications">
@@ -767,7 +783,7 @@
 					<References Name="[dbo].[Playlist]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="27" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="28" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_PlaylistItem]">
 			<Relationship Name="ColumnSpecifications">
@@ -786,7 +802,7 @@
 					<References Name="[dbo].[PlaylistItem]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="28" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="29" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_Rating]">
 			<Relationship Name="ColumnSpecifications">
@@ -805,7 +821,7 @@
 					<References Name="[dbo].[Rating]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="29" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="30" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_User]">
 			<Relationship Name="ColumnSpecifications">
@@ -824,7 +840,7 @@
 					<References Name="[dbo].[User]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="30" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="31" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_Video]">
 			<Relationship Name="ColumnSpecifications">
@@ -843,7 +859,7 @@
 					<References Name="[dbo].[Video]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="31" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="32" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[Playlist]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -945,7 +961,7 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="13" />
+						<AttachedAnnotation Disambiguator="14" />
 					</Element>
 				</Entry>
 				<Entry>
@@ -962,7 +978,7 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="12" />
+						<AttachedAnnotation Disambiguator="13" />
 					</Element>
 				</Entry>
 			</Relationship>
@@ -971,8 +987,8 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="27" />
-			<AttachedAnnotation Disambiguator="20" />
+			<AttachedAnnotation Disambiguator="28" />
+			<AttachedAnnotation Disambiguator="21" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[PlaylistItem]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -1032,9 +1048,9 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="28" />
-			<AttachedAnnotation Disambiguator="21" />
+			<AttachedAnnotation Disambiguator="29" />
 			<AttachedAnnotation Disambiguator="22" />
+			<AttachedAnnotation Disambiguator="23" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[Rating]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -1110,9 +1126,9 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="29" />
-			<AttachedAnnotation Disambiguator="23" />
+			<AttachedAnnotation Disambiguator="30" />
 			<AttachedAnnotation Disambiguator="24" />
+			<AttachedAnnotation Disambiguator="25" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[User]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -1199,7 +1215,7 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="14" />
+						<AttachedAnnotation Disambiguator="15" />
 					</Element>
 				</Entry>
 				<Entry>
@@ -1216,6 +1232,7 @@
 								</Element>
 							</Entry>
 						</Relationship>
+						<AttachedAnnotation Disambiguator="3" />
 					</Element>
 				</Entry>
 			</Relationship>
@@ -1224,8 +1241,8 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="30" />
-			<AttachedAnnotation Disambiguator="25" />
+			<AttachedAnnotation Disambiguator="31" />
+			<AttachedAnnotation Disambiguator="26" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[UserRole]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -1245,7 +1262,7 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="3" />
+						<AttachedAnnotation Disambiguator="4" />
 					</Element>
 				</Entry>
 				<Entry>
@@ -1372,7 +1389,7 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="16" />
+						<AttachedAnnotation Disambiguator="17" />
 					</Element>
 				</Entry>
 				<Entry>
@@ -1389,7 +1406,7 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="18" />
+						<AttachedAnnotation Disambiguator="19" />
 					</Element>
 				</Entry>
 				<Entry>
@@ -1406,7 +1423,7 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="15" />
+						<AttachedAnnotation Disambiguator="16" />
 					</Element>
 				</Entry>
 				<Entry>
@@ -1423,7 +1440,7 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="19" />
+						<AttachedAnnotation Disambiguator="20" />
 					</Element>
 				</Entry>
 				<Entry>
@@ -1457,7 +1474,7 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="17" />
+						<AttachedAnnotation Disambiguator="18" />
 					</Element>
 				</Entry>
 			</Relationship>
@@ -1466,8 +1483,8 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="31" />
-			<AttachedAnnotation Disambiguator="26" />
+			<AttachedAnnotation Disambiguator="32" />
+			<AttachedAnnotation Disambiguator="27" />
 		</Element>
 	</Model>
 </DataSchemaModel>
