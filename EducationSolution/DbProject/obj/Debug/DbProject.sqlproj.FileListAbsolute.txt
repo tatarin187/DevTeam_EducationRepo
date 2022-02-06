@@ -2,9 +2,9 @@ D:\Repo\DevTeam\DevTeam_EducationRepo\EducationSolution\DbProject\bin\Debug\DbPr
 D:\Repo\DevTeam\DevTeam_EducationRepo\EducationSolution\DbProject\bin\Debug\DbProject.dll
 D:\Repo\DevTeam\DevTeam_EducationRepo\EducationSolution\DbProject\bin\Debug\DbProject.pdb
 D:\Repo\DevTeam\DevTeam_EducationRepo\EducationSolution\DbProject\obj\Debug\DbProject.sqlprojAssemblyReference.cache
+D:\Repo\DevTeam\DevTeam_EducationRepo\EducationSolution\DbProject\obj\Debug\DbProject.dll
+D:\Repo\DevTeam\DevTeam_EducationRepo\EducationSolution\DbProject\obj\Debug\DbProject.pdb
 D:\Repo\DevTeam\DevTeam_EducationRepo\EducationSolution\DbProject\obj\Debug\Model.xml
 D:\Repo\DevTeam\DevTeam_EducationRepo\EducationSolution\DbProject\obj\Debug\refactor.xml
 D:\Repo\DevTeam\DevTeam_EducationRepo\EducationSolution\DbProject\obj\Debug\postdeploy.sql
 D:\Repo\DevTeam\DevTeam_EducationRepo\EducationSolution\DbProject\obj\Debug\predeploy.sql
-D:\Repo\DevTeam\DevTeam_EducationRepo\EducationSolution\DbProject\obj\Debug\DbProject.dll
-D:\Repo\DevTeam\DevTeam_EducationRepo\EducationSolution\DbProject\obj\Debug\DbProject.pdb
