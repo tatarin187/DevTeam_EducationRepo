@@ -32,5 +32,7 @@ namespace EFProject
         public virtual DbSet<Rating> Ratings { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Video> Videos { get; set; }
+        public virtual DbSet<DeploymentScript> DeploymentScripts { get; set; }
+        public virtual DbSet<UserRole> UserRoles { get; set; }
     }
 }
