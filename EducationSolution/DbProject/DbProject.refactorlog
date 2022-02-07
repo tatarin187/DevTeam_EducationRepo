@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
   <Operation Name="Rename Refactor" Key="3d69856c-e537-455f-babb-eb3c16233dac" ChangeDateTime="02/06/2022 02:54:32">
-    <Property Name="ElementName" Value="[dbo].[UserRole].[Nae]" />
+    <Property Name="ElementName" Value="[dbo].[UserRole].[Name]" />
     <Property Name="ElementType" Value="SqlSimpleColumn" />
     <Property Name="ParentElementName" Value="[dbo].[UserRole]" />
     <Property Name="ParentElementType" Value="SqlTable" />
